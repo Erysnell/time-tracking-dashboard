@@ -1,0 +1,57 @@
+:root {
+    --light-red-work: hsl(15, 100%, 70%);
+    --soft-blue-play: hsl(195, 74%, 62%);
+    --light-red-study: hsl(348, 100%, 68%);
+    --lime-green-exercise: hsl(145, 58%, 55%);
+    --violet-social: hsl(264, 64%, 52%);
+    --soft-orange-self-care: hsl(43, 84%, 65%);
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Esto hará que el main se centre verticalmente en la pantalla */
+    background-color: var(--very-dark-blue);
+}
+
+main {
+    display: flex;
+    justify-content: space-between; /* Esto separará card-title y report-container */
+    width: 70%; /* Puedes ajustar esto según tus necesidades */
+}
+
+.card-title img {
+    width: 50px; /* Ajusta este valor para cambiar el tamaño de la imagen */
+    border: 2px solid white; /* Ajusta estos valores para cambiar el borde */
+}
+.card-title {
+    width: 30%; /* Ajustar el ancho de card-title */
+    background-color: hsl(246, 80%, 60%);
+}
+
+.card-title div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.report-container {
+    display: flex;
+    flex-wrap: wrap; /* Esto permitirá que los elementos se envuelvan en dos filas */
+    justify-content: space-between; /* Esto separará los elementos dentro de report-container */
+    width: 70%; /* Puedes ajustar esto según tus necesidades */
+}
+
+.reports {
+    flex-basis: calc(33.33% - 10px); /* Esto hará que los elementos tengan aproximadamente un tercio del ancho de report-container, ajusta el valor de resta según tus necesidades */
+    margin-bottom: 20px; /* Puedes ajustar esto según tus necesidades */
+}

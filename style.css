@@ -12,46 +12,158 @@
 }
 
 body {
+    margin: auto;
     font-family: 'Rubik', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Esto hará que el main se centre verticalmente en la pantalla */
     background-color: var(--very-dark-blue);
-}
-
-main {
+    color: white;
+    height: 100vh;
     display: flex;
-    justify-content: space-between; /* Esto separará card-title y report-container */
-    width: 70%; /* Puedes ajustar esto según tus necesidades */
+    font-size: 0.8rem;
 }
 
-.card-title img {
-    width: 50px; /* Ajusta este valor para cambiar el tamaño de la imagen */
-    border: 2px solid white; /* Ajusta estos valores para cambiar el borde */
-}
-.card-title {
-    width: 30%; /* Ajustar el ancho de card-title */
-    background-color: hsl(246, 80%, 60%);
+.item-container {
+    width: 77vw;
+    height: 36vw;
+    margin: auto;
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
 }
 
-.card-title div {
+.avatar-image {
+    width: 30%;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-bottom: 8%;
+
+}
+
+.item-avatar {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
-.report-container {
+.avatar {
+    height: 70%;
+    background-color: var(--desaturated-blue);
+    border-radius: 12px;
+    padding: 32px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.avatar span {
+    font-size: 2.5rem;
+}
+
+.btn-container {
+    height: 30%;
     display: flex;
-    flex-wrap: wrap; /* Esto permitirá que los elementos se envuelvan en dos filas */
-    justify-content: space-between; /* Esto separará los elementos dentro de report-container */
-    width: 70%; /* Puedes ajustar esto según tus necesidades */
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    padding-left: 20px;
 }
 
-.reports {
-    flex-basis: calc(33.33% - 10px); /* Esto hará que los elementos tengan aproximadamente un tercio del ancho de report-container, ajusta el valor de resta según tus necesidades */
-    margin-bottom: 20px; /* Puedes ajustar esto según tus necesidades */
+button {
+    border: none;
+    background-color: transparent;
+    color: var(--pale-blue);
 }
+
+main section{
+    background-color: var(--dark-blue);
+    border-radius: 12px;
+}
+.items{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+}
+.items img{
+    position: absolute;
+    /*right: 80%;*/
+
+}
+
+.cart img {
+    top: 10%;
+    right: 12%;
+}
+
+.icon {
+    top: -3%;
+    right: 5%;
+}
+
+.cart {
+    background-color: var(--dark-blue);
+    position: relative;
+    height: 80%;
+    border-radius: 8px;
+    padding: 32px;
+    padding-top: 12px;
+    box-sizing: border-box;
+}
+
+.cart p {
+    margin-top: 0;
+}
+
+.cart p:nth-child(3){
+    font-size: 3.5rem;
+    margin-bottom: 4px;
+    margin-top: 32px;
+}
+
+.cart p:nth-child(2){
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.avatar p {
+    color: var(--pale-blue);
+}
+
+span {
+    display: block;
+    color: var(--pale-blue);
+}
+
+p span {
+    color: white;
+}
+
+.items:nth-child(2){
+    background-color: var(--light-red-work);
+}
+ .items:nth-child(3){
+     background-color: var(--soft-blue-play);
+ }
+.items:nth-child(4){
+    background-color: var(--light-red-study);
+}
+.items:nth-child(5){
+    background-color: var(--lime-green-exercise);
+}
+.items:nth-child(6){
+    background-color: var(--violet-social);
+}
+.items:nth-child(7){
+    background-color: var(--soft-orange-self-care);
+}
+
+button:hover {
+    color: white;
+}
+
+.cart:hover {
+    background-color: var(--desaturated-blue);
+}
+
